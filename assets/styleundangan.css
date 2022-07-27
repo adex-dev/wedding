@@ -1,0 +1,485 @@
+@font-face {
+  font-family: undangan;
+  src: url('./font/PlayfairDisplaySC-Italic.otf')
+}
+
+@font-face {
+  font-family: undangan2;
+  src: url('./font/PlayfairDisplaySC-BoldItalic.otf')
+}
+
+@font-face {
+  font-family: temaundangan;
+  src: url('./font/fs.TTF')
+}
+
+.textnama {
+  font-family: temaundangan;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: textheader;
+  src: url('./font/undangan.ttf')
+}
+
+#envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100px;
+  background-color: #e5ebee;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 82px solid transparent;
+  border-top: 98px solid rgb(182, 72, 72);
+  transform-origin: top;
+}
+
+.pocket {
+  border-left: 140px solid #e8a7a1;
+  border-right: 140px solid #e8a7a1;
+  border-bottom: 90px solid #e8a7a1;
+  border-top: 90px solid transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.bgbody {
+  background-image: url('./src/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.daun {
+  background-image: url('./src/daun.png');
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: center right;
+}
+
+.bgbody2 {
+  background-image: url('./src/bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgfull {
+  background-image: url('./src/bgfull.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgdown {
+  background-image: url('./src/bgdown.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.foto2 {
+  background-image: url('./src/templateundangan.png');
+  background-repeat: round;
+  background-size: cover;
+}
+
+.foto1 {
+  background-image: url('./src/foto1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.letter {
+  position: relative;
+  background-color: #fff;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  top: 5%;
+  border-radius: 6px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
+}
+
+.letter:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25%, rgba(215, 227, 239, 0.70) 55%, rgba(215, 227, 239, 1.00) 100%);
+}
+
+.words {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 14%;
+  background-color: none;
+}
+
+.words.line1 {
+  top: 15%;
+  width: 20%;
+  height: 7%;
+}
+
+.words.line2 {
+  top: 30%;
+}
+
+.words.line3 {
+  top: 40%;
+}
+
+.words.line4 {
+  top: 70%;
+}
+
+.words.button {
+  top: 50%;
+  z-index: 1;
+  left: 25%;
+}
+
+.open .flap {
+  transform: rotatex(180deg);
+  transition: transform 0.4s ease, z-index 0.6s;
+  z-index: 1;
+}
+
+.close .flap {
+  transform: rotatex(0deg);
+  transition: transform 0.4s 0.6s ease, z-index 1s;
+  z-index: 5;
+}
+
+.close .letter {
+  transform: translatey(0px);
+  transition: transform 0.4s ease, z-index 1s;
+  z-index: 1;
+}
+
+.open .letter {
+  transform: translatey(-60px);
+  transition: transform 0.4s 0.6s ease, z-index 0.6s;
+  z-index: 2;
+}
+
+.hearts {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+
+.heart2 {
+  position: absolute;
+  bottom: 0 !important;
+  cursor: pointer;
+  right: 10%;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: '';
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #d00000;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart2:before,
+.heart2:after {
+  position: absolute;
+  content: '';
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.heart2:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.close .heart {
+  opacity: 0;
+  animation: none;
+}
+
+.a1 {
+  left: 20%;
+  transform: scale(0.6);
+  opacity: 1;
+  animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+.btnoption {
+  opacity: 0;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.a2 {
+  left: 55%;
+  transform: scale(1);
+  opacity: 1;
+  animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+.a3 {
+  left: 10%;
+  transform: scale(0.8);
+  opacity: 1;
+  animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+.a4 {
+  bottom: 20%;
+  left: 25%;
+  transform: scale(0.8);
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes slideUp {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -600px;
+  }
+}
+
+@keyframes slideUp2 {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -80px;
+  }
+}
+
+@keyframes sideSway {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
+
+body {
+  background-color: #a8e2ff;
+}
+
+.envelope-wrapper {
+  height: 380px;
+}
+
+.reset {
+  text-align: center;
+}
+
+.reset button {
+  font-weight: 800;
+  font-style: normal;
+  transition: all 0.1s linear;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: solid 2px #0077b2;
+  border-radius: 4px;
+  color: #0077b2;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  line-height: 1em;
+  text-decoration: none;
+  min-width: 120px;
+  outline: none;
+}
+
+.reset button:hover {
+  background-color: #0077b2;
+  color: #fff;
+}
+
+.mouse {
+  cursor: pointer;
+}
+
+.textundangan {
+  font-family: undangan;
+}
+
+.texthome {
+  font-family: textheader;
+}
+
+.textundangan2 {
+  font-family: undangan2;
+}
+
+@media screen and (min-width:992px) {
+  .textcard {
+    margin-top: -10% !important;
+  }
+
+  .musik {
+    height: 50px;
+    width: 50px;
+  }
+
+  .musik2 {
+    margin-bottom: 59px !important;
+    height: 50px;
+    width: 50px;
+  }
+
+  .btntop .musik2 {
+    z-index: 100;
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .tulisannama {
+    bottom: 8% !important;
+    height: 42px;
+    flex-wrap: wrap-reverse;
+    width: 159px;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .tulisannama {
+    height: 42px;
+    flex-wrap: wrap-reverse;
+    width: 72px;
+    bottom: 6.5% !important;
+    font-size: 10px !important;
+  }
+
+  .row>* {
+    padding: 0 !important;
+  }
+
+  .bgbody2 {
+    background: white;
+  }
+
+  .textcard {
+    margin-top: -20% !important;
+  }
+
+  .surat {
+    font-size: 12px;
+  }
+
+  .text-resepsi {
+    flex-wrap: wrap;
+    width: 260px;
+  }
+
+  .musik {
+    height: 30px;
+    width: 30px;
+  }
+
+  .musik2 {
+    margin-bottom: 59px !important;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.btntop .musik {
+  z-index: 100;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+  cursor: pointer;
+}
+
+.btntop .musik2 {
+  z-index: 100;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+  cursor: pointer;
+}

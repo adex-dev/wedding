@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="styleundangan.css">
+
+  <title>Undangan Weeding</title>
+</head>
+
+<body class="bgbody2">
+  <div class="container m-md-2">
+    <div class="row">
+      <div class="col-md-4 d-none d-md-block"></div>
+      <div class="col-md-4 col-sm-12">
+        <div class="card bgbody min-vh-100">
+          <div class="card-body">
+            <h1 class="text-center textundangan">The wedding of</h1><br>
+            <h2 class="text-center textundangan2">Juliet</h2><br> <h1 class="text-center textundangan2">&</h1><br> <h2 class="text-center textundangan2">Romeo</h2>
+           <figure style=" margin-top: -48px !important;">
+            <div class="envelope-wrapper">
+              <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket">
+                </div>
+                <div class="letter ">
+                  <div class="words line1 w-100">
+                      <h6 class="textundangan">Kepada Yth.Bpk/Ibu/Saudara/i</h6><br>
+                  </div>
+                  <div class="words line2"> <h6 class="text-center textundangan">AKMAD NUDIN</h6></div>
+                  <div class="words line3 d-flex justify-item-center"></div>
+                  <div class="words line4"></div>
+                </div>
+                <div class="hearts">
+                  <div class="heart a1"></div>
+                  <div class="heart a2"></div>
+                  <div class="heart a3"></div>
+                </div>
+                <button class="btn position-absolute btn-sm btn-primary mouse btnbuka  btnoption textundangan"
+                  style="z-index: 10; top: 15%; left: 30%;" onclick="window.location.href='home.html'">Lihat Undangan</button>
+                <figure>
+                <img src="<?= base_url('assets/src/unlock.png') ?>" width="60" class="position-absolute btngambar rounded-circle btnunlock mouse"
+                  id="imgplus" title="Buka Undangan" style="z-index: 5;top: 50%;left: 41%;" alt="">
+                  <figcaption class="position-absolute" style="z-index: 6;top: 80%;left: 10%;" alt=""><span style="font-size: 9px;">klik gembok untuk membuka undangan</span></figcaption>
+                </figure>
+              </div>
+            </div>
+            <figcaption class="text-center" style="
+            margin-top: -100px;
+        "><span class="textundangan">Mohon Maaf Apabila ada kesalahan dalam Penulisan nama dan gelar</span></figcaption>
+           </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-none d-md-block"></div>
+    </div>
+  </div>
+  <script src="jquery.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="jsundanga.js"></script>
+</body>
+
+</html>
